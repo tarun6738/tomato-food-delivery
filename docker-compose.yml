@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  backend:
+    image: tarunreddy04/food-delivery-backend:latest
+    ports:
+      - "${BACKEND_PORT:-4000}:4000"
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - USER_FRONTEND_URL=${USER_FRONTEND_URL}
+      - PORT=${BACKEND_PORT:-4000}
+
+  frontend:
+    image: tarunreddy04/food-delivery-frontend:latest
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    environment:
+      - VITE_BACKEND_URL=${VITE_BACKEND_URL}
+      - PORT=${FRONTEND_PORT:-5173}
+
+  admin:
+    image: tarunreddy04/food-delivery-admin:latest
+    ports:
+      - "${ADMIN_PORT:-5174}:5174"
+    environment:
+      - VITE_BACKEND_URL=${VITE_BACKEND_URL}
+      - PORT=${ADMIN_PORT:-5174}
