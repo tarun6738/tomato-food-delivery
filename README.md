@@ -2,7 +2,7 @@
 
 This repository contains the source code for a food delivery application with a frontend, backend, and admin panel. Each part of the application is containerized using Docker and can be easily set up using Docker Compose.
 
-## Prerequisites
+## Follow the steps to setup the application in your local machine
 
 Before you begin, ensure you have the following installed on your system:
 
@@ -37,7 +37,7 @@ Replace your_jwt_secret and your_stripe_secret_key with your actual secret keys.
 Copy paste the `docker-compose.yml` code from my github repository to your project directory.
 So currently your project directory contains 2 files, `.env` and `docker-compose.yml`
 
-And yes !!. Now you can run the command `docker-compose up --build` t start the application
+And yes !!. Now you can run the command `docker-compose up --build` to start the application
 To stop you can use `docker-compose down` command
 
 
