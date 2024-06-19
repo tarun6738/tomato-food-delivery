@@ -40,4 +40,9 @@ So currently your project directory contains 2 files, `.env` and `docker-compose
 And yes !!. Now you can run the command `docker-compose up --build` to start the application
 To stop you can use `docker-compose down` command
 
+## Accessing the Application
+`Frontend`: http://localhost:5173
+`Admin Panel`: http://localhost:5174
+`Backend API`: http://localhost:4000
+
 
